@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(timer, SIGNAL(timeout()), this, SLOT(updateSeconds()));
 
-    QSystemTrayIcon *icon = new QSystemTrayIcon(QIcon(":/sounds/favicon.ico"),this);
+    QSystemTrayIcon *icon = new QSystemTrayIcon(QIcon(":/resources/favicon.ico"),this);
     icon->setVisible(true);
     icon->setToolTip("StandUp Alarm");
     icon->show();

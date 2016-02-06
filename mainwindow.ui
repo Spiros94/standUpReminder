@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/sounds/favicon.ico</normaloff>:/sounds/favicon.ico</iconset>
+    <normaloff>:/resources/favicon.ico</normaloff>:/resources/favicon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="resetBtn">
