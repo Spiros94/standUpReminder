@@ -45,7 +45,7 @@ private:
     QString TimeToString(int hours, int mins, int secs);
     void checkTime(int seconds);
 
-    QString soundFile = "resources/music.mp3";
+    QString soundFilePath = "resources/";
 
     QTimer *timer;
     Ui::MainWindow *ui;

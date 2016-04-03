@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <random>
+#include <QDirIterator>
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -116,6 +119,22 @@ void MainWindow::checkTime(int seconds)
     if(hours == uiHours && (uiMins <= mins) && (mp3play->state() == QMediaPlayer::StoppedState)) // Check if the time is passed
     {
         this->showTop();
+
+        QDirIterator iter(soundFilePath, QStringList() << "*.mp3" << "*.wav", QDir::Files);
+        QStringList soundFiles;
+
+        while(iter.hasNext())
+        {
+            soundFiles << iter.next();
+        }
+
+
+        std::random_device rd; //Generate a random number
+        std::mt19937 rng(rd());
+        std::uniform_int_distribution<int> uni(0,soundFiles.length()-1);
+        auto random_int = uni(rng);
+
+        QString soundFile = soundFiles.at(random_int);  // Pick a random song from the list
         QFile file(soundFile);
         if(file.open(QFile::ReadOnly))
         {
