@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>resources/favicon.ico</file>
+        <file>resources/misirlou.mp3</file>
     </qresource>
 </RCC>

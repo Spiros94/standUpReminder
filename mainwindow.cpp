@@ -123,6 +123,12 @@ void MainWindow::checkTime(int seconds)
             mp3play->setVolume(100);
             mp3play->play();
         }
+        else
+        {
+            mp3play->setMedia(QMediaContent(QUrl("qrc:/resources/misirlou.mp3")));
+            mp3play->setVolume(100);
+            mp3play->play();
+        }
     }
 }
 
